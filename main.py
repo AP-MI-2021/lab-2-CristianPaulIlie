@@ -65,10 +65,35 @@ def test_is_palindrome():
 
 def test_is_superprime():
     assert is_superprime(233) == True
-    assert is_superprime(17) == True
+    assert is_superprime(7) == True
     assert is_superprime(214) == False
 
 
-test_get_largest_prime_below()
-test_is_palindrome()
-test_is_superprime()
+def main():
+    test_get_largest_prime_below()
+    test_is_palindrome()
+    test_is_superprime()
+    print("1.Gaseste ultimul numar prim, mai mic decat cel dat.")
+    print("2.Verifica daca numarul e palindrom.")
+    print("3.Verifica daca numarul e superprim.")
+    print("x.Iesire")
+    while True:
+        optiune=input("Dati optiunea:")
+        if optiune=='x':
+            break
+        elif optiune=='1':
+            nr=int(input("Dati numarul:"))
+            if nr < 3:
+                print("Nu este o valoare valida.Reincercati.")
+            else:
+                maxnr=get_largest_prime_below(nr)
+                print(f"Ultimul numar prim mai mic decat {nr} este: {maxnr}")
+        elif optiune=='2':
+            n=input("Dati numarul:")
+            print(is_palindrome(n))
+        elif optiune=='3':
+            n=int(input("Dati numarul:"))
+            print(is_superprime(n))
+
+main()
+
