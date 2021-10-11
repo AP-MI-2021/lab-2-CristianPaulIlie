@@ -89,7 +89,7 @@ def main():
                 maxnr=get_largest_prime_below(nr)
                 print(f"Ultimul numar prim mai mic decat {nr} este: {maxnr}")
         elif optiune=='2':
-            n=input("Dati numarul:")
+            n=int(input("Dati numarul:"))
             print(is_palindrome(n))
         elif optiune=='3':
             n=int(input("Dati numarul:"))
